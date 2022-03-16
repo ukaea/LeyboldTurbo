@@ -14,6 +14,7 @@ define DIR_template
 endef
 $(foreach dir, $(filter-out configure,$(DIRS)),$(eval $(call DIR_template,$(dir))))
 
+LeyboldSimApp_DEPEND_DIRS += LeyboldTurboApp
 iocBoot_DEPEND_DIRS += $(filter %App,$(DIRS))
 
 

@@ -24,6 +24,7 @@
 #ifdef epicsExportSharedSymbols
 #define LeyboldBaseepicsExportSharedSymbols
 #undef epicsExportSharedSymbols
+#include <shareLib.h>
 #endif
 
 #include <asynPortDriver.h>

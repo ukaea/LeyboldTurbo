@@ -32,7 +32,6 @@
 
 #include <ParameterDefns.h>
 
-#define epicsExportSharedSymbols
 #include <epicsExport.h>
 
 #include <stdlib.h>

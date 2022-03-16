@@ -25,11 +25,13 @@
 #include "LeyboldBase.h"
 #include "USSPacket.h"
 
+#include <shareLib.h>
+
 #include <map>
 #include <string>
 #include <vector>
 
-class CLeyboldTurboPortDriver : public CLeyboldBase {
+class epicsShareClass CLeyboldTurboPortDriver : public CLeyboldBase {
 public:
 	// NB, an MBBI string is limited to 40 charachters in EPICS.
 	static const size_t MaxEPICSMBBIStrLen = 16;

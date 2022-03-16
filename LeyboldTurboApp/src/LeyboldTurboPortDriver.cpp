@@ -18,8 +18,6 @@
 //																									//
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include "LeyboldTurboPortDriver.h"
-
 #include <iocsh.h>
 #include <epicsExit.h>
 #include <epicsAssert.h>
@@ -29,8 +27,8 @@
 #include "USSPacket.h"
 #include "ParameterDefns.h"
 
-#define epicsExportSharedSymbols
 #include <epicsExport.h>
+#include "LeyboldTurboPortDriver.h"
 
 #include <stdlib.h>
 #include <stdexcept>

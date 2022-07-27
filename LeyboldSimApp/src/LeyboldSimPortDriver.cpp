@@ -19,8 +19,6 @@
 //																									//
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include "LeyboldSimPortDriver.h"
-
 #include <iocsh.h>
 #include <epicsExit.h>
 #include <epicsAssert.h>
@@ -31,10 +29,10 @@
 #include <asynStandardInterfaces.h>
 
 #include <ParameterDefns.h>
+#include <stdlib.h>
 
 #include <epicsExport.h>
-
-#include <stdlib.h>
+#include "LeyboldSimPortDriver.h"
 
 epicsMutex CLeyboldSimPortDriver::m_Mutex;
 CLeyboldSimPortDriver* CLeyboldSimPortDriver::m_Instance;

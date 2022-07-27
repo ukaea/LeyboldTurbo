@@ -22,6 +22,11 @@
 #ifndef LEYBOLD_SIM_DRIVER_H
 #define LEYBOLD_SIM_DRIVER_H
 
+#ifdef epicsExportSharedSymbols
+#define LeyboldSimPortDriverepicsExportSharedSymbols
+#undef epicsExportSharedSymbols
+#endif
+
 #include <USSPacket.h>
 
 #include <LeyboldBase.h>
@@ -29,13 +34,19 @@
 #include <epicsMutex.h>
 #include <iocsh.h>
 
+#ifdef LeyboldSimPortDriverepicsExportSharedSymbols
+#undef LeyboldSimPortDriverepicsExportSharedSymbols
+#define epicsExportSharedSymbols
+#endif
+#include <shareLib.h>
+
 #include <map>
 #include <vector>
 #include <string>
 
 class epicsThread;
 
-class CLeyboldSimPortDriver : public CLeyboldBase {
+class epicsShareClass CLeyboldSimPortDriver : public CLeyboldBase {
 public:
     CLeyboldSimPortDriver(const char *AsynPortName, int NumPumps, int NoOfPZD);
     ~CLeyboldSimPortDriver();
